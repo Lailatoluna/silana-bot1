@@ -1,23 +1,17 @@
 import fetch from 'node-fetch'
 let handler = async (m, { conn }) => {
   let caption = `
-*「 معلومات عن صاحب البوت 」*
+*「 معلومات عن صاحب البوت SASUKE TECH 」*
 
-*Number :*\nwa.me/212717457920
-*instagram:*\ninstagram.com/noureddine_ouafy
-
-*youtube:*\nyoutube.com/@noureddineouafy2
-
-*facebook page:*\nwww.facebook.com/profile.php?id=100063533185520
-
-*script bot :* github.com/noureddineouafy
+*المطور :*\nwa.me/212710725533
+*مجموعتي الرسمية:*\nhttps://chat.whatsapp.com/H7iwUtSGtFZI8q0Xf4tbpz
 
 `.trim()
   m.reply(caption)
 }
-handler.help = ['owner']
+handler.help = ['owner','المطور']
 handler.tags = ['infobot']
-handler.command = /^(owner)$/i
+handler.command = /^(owner|المطور)$/i
 handler.limit = false
 
 export default handler
