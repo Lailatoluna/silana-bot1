@@ -1,25 +1,25 @@
 import fetch from 'node-fetch';
 
 let handler = async (m, { conn, args, text, usedPrefix, command }) => {
-  if (!args[0]) throw 'مثال:\n ' + usedPrefix + command + ' facebook lite';
+  if (!args[0]) throw 'مثال:\n ' + usedPrefix + command + ' facebook';
   let info = await apkinfo(text);
   let res = await apk(text);
 
 
         if (res.size > 993000000) {
             m.react(error)
-            throw '*ملف APK كبير جدًا. الحد الأقصى لحجم التنزيل هو 990 ميجابايت*.';
+            throw '*ملف APK كبير جدًا. الحد الأقصى لحجم التنزيل هو 150 ميجا بايت*.';
           }
 
 
   await conn.sendMessage(m.chat, {
     image: { url: info.icon },
-    caption: `*إسم التطبيق:* \n${info.name}\n*الباكيدج الخاص به:* \n${info.packageN}\n*ملف ثانوي للتطبيق:* \n*OBB*\n${info.obb_link}`,
+    caption: `*📊إسم التطبيق :* \n${info.name}\n*📦الباكيدج الخاص به :* \n${info.packageN}\n*ملف ثانوي للتطبيق:* \n*OBB*\n${info.obb_link}`,
     footer: '_Apk files..._',
   });
 
   await conn.sendMessage(m.chat, {
-    text: `*جاري تحميل* ${info.name}...\n\nسعيد انك تستعمل بوبيزة بوت وسأكون مسرورا 😄 إن انضممت لأنستغرامي\ninstagram.com/noureddine_ouafy`,
+    text: `*جاري تحميل* ${info.name}...\n\n*تسنا واحد شوية ويصيفط ليك البوت التطبيق لي بغيتي راه كيتعطل شوية ومتكترش عليه 😄❤️*`,
   });
 
   await conn.sendMessage(
@@ -29,8 +29,8 @@ let handler = async (m, { conn, args, text, usedPrefix, command }) => {
   );
 };
 
-handler.command = /^(apk)$/i;
-handler.help = ['apk'];
+handler.command = /^(apk|تطبيق)$/i;
+handler.help = ['apk','تطبيق'];
 handler.tags = ['downloader'];
 handler.premium = false
 export default handler;
@@ -42,7 +42,7 @@ async function apkinfo(url) {
   try {
     let icon = $.datalist.list[0].icon;
   } catch {
-    throw 'تعذر تحميل التطبيق انا اسفة';
+    throw '*تعذر تحميل التطبيق انا اسف*';
   }
 
   let icon = $.datalist.list[0].icon;
@@ -60,7 +60,7 @@ async function apkinfo(url) {
     obb = false;
   }
 
-  if (!download) throw 'تعذر تحميل التطبيق انا اسفة';
+  if (!download) throw '*تعذر تحميل التطبيق انا اسف*';
   return { obb, obb_link, name, icon, packageN };
 }
 
