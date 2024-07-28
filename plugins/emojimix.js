@@ -15,7 +15,7 @@ reject(err)
 let handler = async (m, { conn, text, args, usedPrefix, command }) => {
 	
 if (!args[0]) throw ` هذا الامر خاص بدمج اثنين ايموجي  في ايموجي واحد سوف اعطيك مثال لتفهم :\n ${usedPrefix + command} 😎+🤑`
-if (!text.includes('+')) throw  `✳️ مثال \n\n📌   \n*${usedPrefix + command}* 😎+🤑`
+if (!text.includes('+')) throw  `✳️ مثال \n\n📌   \n*${usedPrefix + command}* 😎+😄`
 let [emoji, emoji2] = text.split`+`
 let anu = await fetchJson(`https://tenor.googleapis.com/v2/featured?key=AIzaSyAyimkuYQYF_FXVALexPuGQctUWRURdCYQ&contentfilter=high&media_filter=png_transparent&component=proactive&collection=emoji_kitchen_v5&q=${encodeURIComponent(emoji)}_${encodeURIComponent(emoji2)}`)
 for (let res of anu.results) {
@@ -23,8 +23,8 @@ let stiker = await sticker(false, res.url, global.packname, global.author)
 conn.sendFile(m.chat, stiker, null, { asSticker: true }, m)
 }}
 
-handler.help = ['emojimix']
+handler.help = ['jm3lia','jm3']
 handler.tags = ['sticker']
-handler.command = ['emojimix'] 
+handler.command = ['jm3lia','jm3'] 
 
 export default handler
