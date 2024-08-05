@@ -20,7 +20,7 @@ await conn.sendMessage(m.chat, { react: { text: "📂",key: m.key,}
   });
 
   await conn.sendMessage(m.chat, {
-    text: `*tsna wahd chwya 📥...*\n\n> * 𝙎𝘼𝙎𝙐𝙆𝙀 𝙏𝙀𝘾𝙃 ☑️*`,
+    text: `*tsna wahd chwya 📥...*\n\n> *𝙎𝘼𝙎𝙐𝙆𝙀 𝙏𝙀𝘾𝙃 ☑️*`,
   });
 
   await conn.sendMessage(
