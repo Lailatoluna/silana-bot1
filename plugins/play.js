@@ -29,9 +29,8 @@ const link = await yt.audio['128kbps'].download()
   { 
     url: link 
 }, 
-mimetype: 'audio/mp4', fileName: `${title}`, contextInfo: { externalAdReply: { showAdAttribution: true,
+mimetype: 'audio/mp3', fileName: `${title}`, contextInfo: { externalAdReply: { showAdAttribution: true,
 mediaType:  2,
-mediaUrl: url,
 title: title,
 body: "© SASUKE TECH",
 sourceUrl: url,
@@ -41,9 +40,9 @@ thumbnail: await(await conn.getFile(thumbnail)).data
   }
   return conn.sendMessage(m.chat, doc, { quoted: m })
 }
-handler.help = ['song','play','صوت']
+handler.help = ['song','play','صوت','اغنية']
 handler.tags = ['downloader']
-handler.command = /^song|play|صوت$/i
+handler.command = /^song|play|صوت|اغنية$/i
 
 export default handler
 
