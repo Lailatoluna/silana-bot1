@@ -1,10 +1,11 @@
 import fetch from 'node-fetch';
 
 let handler = async (m, { conn, args, text, usedPrefix, command }) => {
-  if (!args[0]) throw 'مثال:\n ' + usedPrefix + command + ' facebook';
+  if (!args[0]) throw '*مثال :*\n ' + usedPrefix + command + ' *bb racing*';
   let info = await apkinfo(text);
   let res = await apk(text);
-
+await conn.sendMessage(m.chat, { react: { text: "📂",key: m.key,}
+  })
 
         if (res.size > 993000000) {
             m.react(error)
@@ -14,12 +15,12 @@ let handler = async (m, { conn, args, text, usedPrefix, command }) => {
 
   await conn.sendMessage(m.chat, {
     image: { url: info.icon },
-    caption: `*📊إسم التطبيق :* \n${info.name}\n*📦الباكيدج الخاص به :* \n${info.packageN}\n*ملف ثانوي للتطبيق:* \n*OBB*\n${info.obb_link}`,
+    caption: `*📊إسم التطبيق :* \n${info.name}\n*📦الباكيدج الخاص به :* \n${info.packageN}\n*💎ملف ثانوي للتطبيق:* \n*📄OBB*\n${info.obb_link}`,
     footer: '_Apk files..._',
   });
 
   await conn.sendMessage(m.chat, {
-    text: `*جاري تحميل* ${info.name}...\n\n*تسنا واحد شوية ويصيفط ليك البوت التطبيق لي بغيتي راه كيتعطل شوية ومتكترش عليه 😄❤️*`,
+    text: `*tsna wahd chwya 📥...*\n\n> * 𝙎𝘼𝙎𝙐𝙆𝙀 𝙏𝙀𝘾𝙃 ☑️*`,
   });
 
   await conn.sendMessage(
@@ -29,8 +30,8 @@ let handler = async (m, { conn, args, text, usedPrefix, command }) => {
   );
 };
 
-handler.command = /^(تطبيق)$/i;
-handler.help = ['تطبيق'];
+handler.command = /^(ttbi9)$/i;
+handler.help = ['ttbi9'];
 handler.tags = ['downloader'];
 handler.premium = false
 export default handler;
