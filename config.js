@@ -9,16 +9,16 @@ global.setting = {
  }
 
 global.owner = [
-['212717457920', 'Nour', true],
-['212605784394', 'silana', false],
+['212710725533', 'SASUKE TECH', true],
+['212605855031', 'silana', false],
 ['', '', false]
 ]
 
 global.info = {
- nomerbot: '212605784394',
- pairingNumber: '212693227969',
- nameown: 'Nour',
- nomerown: '212717457920',
+ nomerbot: '212605855031',
+ pairingNumber: '212605855031',
+ nameown: 'SASUKE',
+ nomerown: '212710725533',
  packname: 'sticker by ',
  author: 'Noureddine',
  namebot: 'ꜱɪʟᴀɴᴀ',
@@ -46,9 +46,7 @@ global.media = {
 
 // Sosmed
 global.url = {
- sig: 'https://instagram.com/noureddine_ouafy',
- sgh:  'https://github.com/noureddineouafy',
- sgc: 'https://chat.whatsapp.com/DABxracGsi5CQMd5d1N1j7'
+ sig: 'https://instagram.com/noureddine_ouafy'
 }
 
 global.wait =` انتظر .. أنا أحاول تلبية طلبك ...`
